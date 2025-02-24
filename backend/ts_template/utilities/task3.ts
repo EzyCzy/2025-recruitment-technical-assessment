@@ -70,7 +70,7 @@ const getBaseIngredients = (recipeLookup: recipe, cookBook: any, baseIngredient:
     if (!placeHolder) {
       throw Error("Invalid name");
     } else {
-      getBaseIngredients(placeHolder, cookBook, baseIngredient, childItem.quantity);
+      getBaseIngredients(placeHolder, cookBook, baseIngredient, childItem.quantity * amount);
     }
   }
 
